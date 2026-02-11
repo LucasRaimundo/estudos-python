@@ -14,9 +14,9 @@ convertido = datetime.strptime(data_usuario, "%d/%m/%Y").date()
 if convertido == now:
     print("A data de vencimento é hoje.")
 elif convertido < now:
-    diferenca = convertido - now
+    diferenca = now - convertido
     print(f"A data de vencimento já passou há {diferenca.days} dias.")
 else:
-    diferenca = now - convertido
+    diferenca = convertido
     print(f"A data de vencimento é daqui a {diferenca.days} dias.")
 
